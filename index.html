@@ -38,3 +38,28 @@
         <button class="row-btn" onclick="handleKeyPress('0')">0</button>
         <button class="row-btn" onclick="handleKeyPress('.')">.</button>
         <button class="row-btn symb-btn" onclick="handleKeyPress('+')">+</button>
+<button class="row-btn eql-btn" onclick="handleKeyPress('=')">=</button>
+    </div>
+ </div>  
+ <script>
+    function handleKeyPress(key)
+    {
+        const inputScreen = document.getElementById('input');
+      if(key=='=')
+      {
+        
+        inputScreen.value = eval(inputScreen.value);
+        
+      }
+      else if (key=='C'){
+        inputScreen.value = '';
+      }
+      else
+      {
+        
+        inputScreen.value  += key;
+      }
+    }
+ </script> 
+</body>
+</html>
